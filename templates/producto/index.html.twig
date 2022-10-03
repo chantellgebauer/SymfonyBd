@@ -3,20 +3,33 @@
 {% block title %}Producto index{% endblock %}
 
 {% block body %}
-    <h1>Producto index</h1>
 
-    <table class="table">
+<div class="container">
+<body style="background-color:#483D8B;"></body>
+       
+        <h1 class="text-center mt-5 mb-3"><font color="white">Producto</font></h1>
+         
+        <div class="card">
+
+       
+<img src="{{ asset('super.png') }}" alt="Symfony!"/>
         <thead>
+        
+        <div class="card-body">
+                <table class="table table-bordered">
             <tr>
                 <th>Id</th>
                 <th>Nombre</th>
                 <th>Color</th>
                 <th>Precio</th>
                 <th>Codigo</th>
-                <th>actions</th>
+                <th width="200px">actions</th>
             </tr>
+
         </thead>
         <tbody>
+        
+        
         {% for producto in productos %}
             <tr>
                 <td>{{ producto.id }}</td>
@@ -27,6 +40,7 @@
                 <td>
                     <a href="{{ path('app_producto_show', {'id': producto.id}) }}">show</a>
                     <a href="{{ path('app_producto_edit', {'id': producto.id}) }}">edit</a>
+                
                 </td>
             </tr>
         {% else %}
@@ -34,6 +48,8 @@
                 <td colspan="6">no records found</td>
             </tr>
         {% endfor %}
+         </div>
+          </div>
         </tbody>
     </table>
 

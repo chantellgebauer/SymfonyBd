@@ -3,9 +3,23 @@
 {% block title %}New Producto{% endblock %}
 
 {% block body %}
-    <h1>Create new Producto</h1>
-
+<div class="container">
+<body style="background-color:#483D8B;">
+       
+        <h1 class="text-center mt-5 mb-3"><font color="white">New Producto</font></h1>
+        <div class="card">
+        <div class="card-header">
+        <center>
+         <center><img src="{{ asset('super.png') }}" alt="Symfony!"/> </center>
     {{ include('producto/_form.html.twig') }}
 
-    <a href="{{ path('app_producto_index') }}">back to list</a>
+    <a class="btn btn-outline-info float-right" href="{{ path('app_producto_index') }}">back to list</a>
+    </div>
+    </div>
+     </div>
+     <center>
+     </body>
 {% endblock %}
+
+
+

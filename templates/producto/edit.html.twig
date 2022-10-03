@@ -3,11 +3,29 @@
 {% block title %}Edit Producto{% endblock %}
 
 {% block body %}
-    <h1>Edit Producto</h1>
+<div class="container">
+<h1 class="text-center mt-5 mb-3"><font color="white">Editar producto</font></h1>
+    <body style="background-color:#483D8B;"></body>
+
+     <div class="card">
+         <div class="card-header">
+     <center>
+     <center><img src="{{ asset('super.png') }}" alt="Symfony!"/> </center>
+      
 
     {{ include('producto/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('app_producto_index') }}">back to list</a>
-
+    
+    <div class="card-header">
+    <a class="btn btn-outline-info float-right" href="{{ path('app_producto_index') }}">back to list</a>
+    </div>
+    
+  
     {{ include('producto/_delete_form.html.twig') }}
+    
+
+      </div>
+      </div>
+     </table>
+     </center>
+    </div>
 {% endblock %}
