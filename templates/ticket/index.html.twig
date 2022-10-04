@@ -3,9 +3,15 @@
 {% block title %}Ticket index{% endblock %}
 
 {% block body %}
-    <h1>Ticket</h1>
-
-    <table class="table">
+<div class="container">
+  <body style="background-color:#483D8B;"></body>
+    <h1 class="text-center mt-5 mb-3"><font color="white">Ticket</font></h1>
+   
+   <div class="card">
+    <img src="{{ asset('super.png') }}" alt="Symfony!"/>
+       
+    <div class="card-body">
+     <table class="table table-bordered">
         <thead>
             <tr>
                 <th>Id</th>
@@ -13,7 +19,7 @@
                 <th>Descripcion</th>
                 <th>Cantidad</th>
                 <th>Precio</th>
-                <th>actions</th>
+                <th width="200px">actions</th>
             </tr>
         </thead>
         <tbody>
@@ -37,5 +43,6 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_ticket_new') }}">Create new</a>
+    <a class="btn btn-outline-info float-right" href="{{ path('app_ticket_new') }}">Create new</a>
+     </div>
 {% endblock %}
